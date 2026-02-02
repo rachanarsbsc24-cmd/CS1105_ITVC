@@ -22,4 +22,7 @@ class Solution:
 obj = Solution()
 print(obj.isAnagram("anagram", "nagaram"))
 print(obj.isAnagram("rat", "car"))
+""" Output: True
+False"""
+
 
