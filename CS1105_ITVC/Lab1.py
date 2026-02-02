@@ -14,3 +14,7 @@ if __name__ == "__main__":
     nums = list(map(int, input("Enter numbers: ").split()))
     sol = Solution()
     print(sol.containsDuplicate(nums))
+    """Output: Enter numbers: 1 2 3 2
+    True"""
+
+
