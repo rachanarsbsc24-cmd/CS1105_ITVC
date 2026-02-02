@@ -6,6 +6,7 @@ for i in range(1, 1000):
         sum = sum + i
 
 print(sum)
+""" Output: 233168"""
 
 # Even Fibonacci Numbers
 
@@ -18,4 +19,6 @@ while a<=4000000:
         sum=sum+a
     a,b = b,a+b
 print(sum)
+"""Output: 4613732"""
+
 
