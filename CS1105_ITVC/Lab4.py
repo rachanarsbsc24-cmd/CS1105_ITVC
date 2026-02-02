@@ -1,9 +1,17 @@
 # 35. Search Insert Position
 
 class Solution:
-    def searchInsert(self, nums, target):
-        left = 0
-        right = len(nums) - 1
+
+    # Linear Search Approach – O(n)
+    def searchInsertLinear(self, nums, target):
+        for i in range(len(nums)):
+            if nums[i] >= target:
+                return i
+        return len(nums)
+
+    # Binary Search Approach – O(log n)
+    def searchInsertBinary(self, nums, target):
+        left, right = 0, len(nums) - 1
 
         while left <= right:
             mid = (left + right) // 2
@@ -21,6 +29,16 @@ class Solution:
 # Test Run
 if __name__ == "__main__":
     obj = Solution()
-    print(obj.searchInsert([1, 3, 5, 6], 5))  
-    print(obj.searchInsert([1, 3, 5, 6], 2))  
-    print(obj.searchInsert([1, 3, 5, 6], 7))  
+    nums = [1, 3, 5, 6]
+
+    print("Linear Search:")
+    print(obj.searchInsertLinear(nums, 5))  # 2
+    print(obj.searchInsertLinear(nums, 2))  # 1
+    print(obj.searchInsertLinear(nums, 7))  # 4
+
+    print("\nBinary Search:")
+    print(obj.searchInsertBinary(nums, 5))  # 2
+    print(obj.searchInsertBinary(nums, 2))  # 1
+    print(obj.searchInsertBinary(nums, 7))  # 4
+
+
